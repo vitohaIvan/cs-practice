@@ -17,7 +17,7 @@ def above_average(names: list[str],scores: list[float]) -> list[str]:
     answ = []
     av = average(scores)
     for i in range(len(scores)):
-        if scores[i] >= av:
+        if scores[i] > av:
             answ += [names[i]]
     return answ
 
