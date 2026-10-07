@@ -1,6 +1,3 @@
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
-
 def winner(names: list[str], scores: list[float]) -> str:
     best = 0
     for i in range(len(scores)):
@@ -23,4 +20,10 @@ def above_average(names: list[str],scores: list[float]) -> list[str]:
         if scores[i] >= av:
             answ += [names[i]]
     return answ
+
+def ranking(names: list[str], scores: list[float]) -> list[str]:
+    seen = {}
+    for i in range(len(names)):
+        seen[names[i]] = scores[i]
+    return sorted(seen,key=seen.get, reverse=1)
 
