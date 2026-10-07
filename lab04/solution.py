@@ -7,4 +7,12 @@ def winner(names: list[str], scores: list[float]) -> str:
         if scores[i] > scores[best]:
             best = i
     return names[best]
-print(winner(names,scores))
+
+def average(scores: list[float]) -> float:
+    if len(scores) == 0:
+        return 0.0
+    total = 0
+    for score in scores:
+        total += score
+
+    return round(total / len(scores), 2)
