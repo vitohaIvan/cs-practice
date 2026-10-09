@@ -26,4 +26,4 @@ def ranking(names: list[str], scores: list[float]) -> list[str]:
     for i in range(len(names)):
         seen[names[i]] = scores[i]
     return sorted(seen,key=seen.get, reverse=1)
-
+print(average([1,2,3]))
