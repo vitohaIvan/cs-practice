@@ -35,13 +35,13 @@ def total_minutes(rows: list[dict], kind: str) -> float:
     for r in rows:
         if r['тип'] == kind:
             try:
-                minutes = float(row["минуты"].replace(",", "."))
+                minutes = float(r["минуты"].replace(",", "."))
                 total += minutes
             except ValueError:
                 continue
     return round(total,1)
 
-def def to_csv(counts: dict) -> str:
+def to_csv(counts: dict) -> str:
     result = "тип,количество\n"
 
     for types in sorted(counts):

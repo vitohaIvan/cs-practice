@@ -1,9 +1,14 @@
-from tablestats import read_rows 
+from tablestats import *
+
+filename = input()
 
 with open("events.csv", encoding="utf-8") as file:
     rows = read_rows(file)
 
-for row in rows:
-    print(row)
+counts = count_types(rows)
+print(len(rows))
+print(len(counts))
+print(total_minutes(rows, "ошибка"))
 
-print("Количество записей:", len(rows))
+with open("summary.csv", "w", encoding="utf-8") as file:
+    file.write(to_csv(counts))
