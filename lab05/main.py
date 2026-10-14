@@ -2,7 +2,7 @@ from tablestats import *
 
 filename = input()
 
-with open("events.csv", encoding="utf-8") as file:
+with open(filename, encoding="utf-8") as file:
     rows = read_rows(file)
 
 counts = count_types(rows)
