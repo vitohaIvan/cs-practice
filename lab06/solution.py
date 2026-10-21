@@ -9,3 +9,5 @@ def count_items(values: list) -> dict:
 def unique_sorted(values: list) -> list:
     return sorted(set(values))
 
+def unique_sorted(values: list) -> list:
+    return sorted(set(values))
