@@ -9,5 +9,12 @@ def count_items(values: list) -> dict:
 def unique_sorted(values: list) -> list:
     return sorted(set(values))
 
-def unique_sorted(values: list) -> list:
-    return sorted(set(values))
+def common(first: list, second: list) -> list:
+    result = []
+    for i in first:
+        if i in second and i not in result:
+            result += [i]
+    return sorted(result)
+
+def only_in_first(first: list, second: list) -> list:
+    return sorted(set(first) - set(second))
