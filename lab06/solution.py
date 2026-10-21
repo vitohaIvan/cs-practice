@@ -6,4 +6,6 @@ def count_items(values: list) -> dict:
         seen[i] += 1
     return seen
 
+def unique_sorted(values: list) -> list:
+    return sorted(set(values))
 
