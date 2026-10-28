@@ -1,6 +1,6 @@
 import numpy as np
 def reshape_rows(values: list[float], width: int) -> list[list[float]]:
-    if (width < 0) or (len(values) % width) != 0:
+    if (width <= 0) or (len(values) % width != 0):
         return []
     arr = np.asarray(values, dtype=float)
     result = arr.reshape(len(values) // width, width)
@@ -23,3 +23,16 @@ def column_means(matrix: list[list[float]]) -> list[float]:
         return []
     result = arr.mean(axis=0)
     return result.round(6).tolist()
+
+def column_range(matrix: list[list[float]], column: int) -> float:
+    arr = np.asarray(matrix, dtype=float)
+
+    if arr.size == 0:
+        return 0.0
+    col = arr.T[column] 
+    m_min = min(col)
+    m_max = max(col)
+    return round(float(m_max - m_min), 6)
+
+
+
