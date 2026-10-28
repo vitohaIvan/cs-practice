@@ -15,3 +15,11 @@ def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> lis
         return [[] for _ in rows]
     result = arr[np.ix_(rows,columns)]
     return result.tolist()
+
+def column_means(matrix: list[list[float]]) -> list[float]:
+    arr = np.asarray(matrix, dtype=float)
+
+    if arr.size == 0:
+        return []
+    result = arr.mean(axis=0)
+    return result.round(6).tolist()
