@@ -9,3 +9,9 @@ def reshape_rows(values: list[float], width: int) -> list[list[float]]:
 def block(matrix: list[list[float]], rows: list[int], columns: list[int]) -> list[list[float]]:
     arr = np.asarray(matrix, dtype=float)
 
+    if arr.size == 0 or not rows:
+        return []
+    if not columns:
+        return [[] for _ in rows]
+    result = arr[np.ix_(rows,columns)]
+    return result.tolist()
