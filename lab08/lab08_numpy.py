@@ -1,6 +1,6 @@
 import numpy as np
 
-# задание 1
+# Задание 1
 hours = np.arange(0, 22, 3)
 line = np.linspace(0, 1, 5)
 zeros = np.zeros(6, dtype=int)
@@ -48,3 +48,35 @@ print(temperatures[:2, 1:])
 
 print('Центральный блок 2x2:')
 print(temperatures[:2, 1:3])
+
+# Задание 4
+
+matrix = np.arange(1, 26).reshape(5, 5)
+
+print('Исходная матрица:')
+print(matrix)
+
+a = matrix[:3, :]
+print('Первые три строки:')
+print(a)
+print('Форма:', a.shape)
+
+b = matrix[-2:, :]
+print('Последние две строки:')
+print(b)
+print('Форма:', b.shape)
+
+c = matrix[:, :2]
+print('Первые два столбца:')
+print(c)
+print('Форма:', c.shape)
+
+d = matrix[1:4, 2:5]
+print('Строки 1-3, столбцы 2-4:')
+print(d)
+print('Форма:', d.shape)
+
+e = matrix[-2:, -2:]
+print('Правый нижний угол 2x2:')
+print(e)
+print('Форма:', e.shape)
