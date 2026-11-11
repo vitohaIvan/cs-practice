@@ -82,7 +82,7 @@ print(e)
 print('Форма:', e.shape)
 
 # Задание 5
-
+ 
 changed_hours = hours.copy()
 changed_hours[2:5] = 99
 changed_hours[::2] = -1
