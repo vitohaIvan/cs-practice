@@ -80,3 +80,25 @@ e = matrix[-2:, -2:]
 print('Правый нижний угол 2x2:')
 print(e)
 print('Форма:', e.shape)
+
+# Задание 5
+
+changed_hours = hours.copy()
+changed_hours[2:5] = 99
+changed_hours[::2] = -1
+
+print('Изменённый hours:', changed_hours)
+print('Исходный hours:', hours)
+
+changed_matrix = matrix.copy()
+
+changed_matrix[1, :] = 0
+changed_matrix[:, -1] = -1
+changed_matrix[1:4, 1:4] = 100
+
+print('Изменённая матрица:')
+print(changed_matrix)
+
+print('Исходная матрица:')
+print(matrix)
+
