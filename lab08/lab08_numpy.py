@@ -102,3 +102,24 @@ print(changed_matrix)
 print('Исходная матрица:')
 print(matrix)
 
+# Задание 6
+
+numbers = np.arange(12)
+table = numbers.reshape(3, 4)
+
+transposed = table.T
+
+print('Исходный массив:')
+print(numbers)
+
+print('Таблица 3x4:')
+print(table)
+
+print('Транспонированная таблица:')
+print(transposed)
+
+print('Форма numbers:', numbers.shape)
+print('Форма table:', table.shape)
+print('Форма transposed:', transposed.shape)
+
+
