@@ -20,8 +20,31 @@ print('identity:\n', identity)
 
 # Задание 2
 
-print("Третий элемент:", hours[2])
-print("Последний элемент:", hours[-1])
-print("Индексы 2–5:", hours[2:6])
-print("Каждый второй:", hours[::2])
-print("В обратном порядке:", hours[::-1])
+print('Третий элемент:', hours[2])
+print('Последний элемент:', hours[-1])
+print('Индексы 2–5:', hours[2:6])
+print('Каждый второй:', hours[::2])
+print('В обратном порядке:', hours[::-1])
+
+
+# Задание 3
+
+temperatures = np.array([
+    [12, 14, 13, 15],
+    [11, 13, 16, 17],
+    [10, 12, 15, 18]
+])
+
+print('Форма:', temperatures.shape)
+print('Количество измерений:', temperatures.ndim)
+print('Количество элементов:', temperatures.size)
+
+print('Вторая строка, третий столбец:', temperatures[1, 2])
+print('Первая строка:', temperatures[0])
+print('Последний столбец:', temperatures[:, -1])
+
+print('Первые две строки без первого столбца:')
+print(temperatures[:2, 1:])
+
+print('Центральный блок 2x2:')
+print(temperatures[:2, 1:3])
